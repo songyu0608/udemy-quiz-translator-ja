@@ -1,0 +1,38 @@
+# Glossary
+
+## Quiz
+- Definition: One Udemy practice test question with its answer choices, as found on the page
+- Code: `extractQuiz()` returns `{ number, question, answers, nodes }`
+- Avoid: "test", "exam" when referring to a single question
+
+## Card
+- Definition: The Udemy DOM element that wraps one answer choice, including its radio/checkbox control and feedback text
+- Code: `cardOf()`, `quiz.nodes.cards`
+- Avoid: "option element"
+
+## Translator
+- Definition: The Chrome built-in on-device Translator API instance (English to Japanese)
+- Code: `translator`, `Translator.create()`, `translateCached()`
+
+## Dictionary
+- Definition: The list of developer terms kept in English in translations
+- Code: `dictionary-terms.js`, `dictionary.js` → `protect()`, `restore()`
+- Avoid: "glossary" for this feature (the glossary is this document)
+
+## Placeholder
+- Definition: A `[[n]]` token that replaces a dictionary term during translation
+- Code: `PLACEHOLDER` in `dictionary.js`
+
+## Side Layout
+- Definition: Inline translations floating in the empty space to the right of the quiz
+- Code: `showSideTranslations()`, `.uqt-side-layer`
+- Avoid: "sidebar" (that is Udemy's curriculum panel)
+
+## Column Shift
+- Definition: Overriding the horizontal margins of Udemy's centered quiz column so the original and its side translation are centered together
+- Code: `shiftForSide()`, `centeredColumn()`, `restoreShift()`
+
+## Inline Translation
+- Definition: Japanese text inserted into the Udemy page directly under the original question or answer
+- Code: `showInlineTranslations()`, `data-udemy-quiz-inline`
+- Avoid: "panel" (the panel UI was removed)
